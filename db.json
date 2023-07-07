@@ -1,0 +1,97 @@
+{
+  "controls": [
+    {
+      "name": "firstName",
+      "label": "First name",
+      "value": "",
+      "type": "input",
+      "required": true
+    },
+    {
+      "name": "lastName",
+      "label": "Last name",
+      "value": "",
+      "type": "input",
+      "required": true
+    },
+    {
+      "name": "email",
+      "label": "Email",
+      "value": "",
+      "type": "input",
+      "required": true
+    },
+    {
+      "name": "mobileNumber",
+      "label": "Phone",
+      "value": "",
+      "type": "input",
+      "required": true
+    },
+    {
+      "name": "dob",
+      "label": "DOB",
+      "value": "",
+      "type": "date",
+      "required": true
+    },
+    {
+      "name": "userRole",
+      "label": "User Role",
+      "type": "select",
+      "value": [
+        {
+          "key": "admin",
+          "value": "Admin"
+        },
+        {
+          "key": "teacher",
+          "value": "Teacher"
+        },
+        {
+          "key": "student",
+          "value": "Student"
+        }
+      ],
+      "required": true
+    },
+    {
+      "name": "gender",
+      "label": "Gender",
+      "type": "radio",
+      "required": true,
+      "value": [
+        {
+          "key": "male",
+          "value": "Male"
+        },
+        {
+          "key": "female",
+          "value": "Female"
+        }
+      ]
+    }
+  ],
+  "userInfo": [
+    {
+      "id": 0,
+      "firstName": "Meghshyam",
+      "lastName": "Wagh",
+      "email": "megh@yopmail.com",
+      "mobileNumber": "8806520498",
+      "dob": "1998-05-19",
+      "userRole": "admin",
+      "gender": "male"
+    },
+    {
+      "firstName": "Kavya",
+      "lastName": "Jani",
+      "email": "kavya@yopmail.com",
+      "mobileNumber": "7766554433",
+      "dob": "2023-07-07",
+      "userRole": "admin",
+      "gender": "female",
+      "id": 2
+    }
+  ]
+}

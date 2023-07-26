@@ -74,14 +74,14 @@
   ],
   "userInfo": [
     {
-      "id": 0,
       "firstName": "Meghshyam",
       "lastName": "Wagh",
       "email": "megh@yopmail.com",
       "mobileNumber": "8806520498",
       "dob": "1998-05-19",
       "userRole": "admin",
-      "gender": "male"
+      "gender": "male",
+      "id": 0
     },
     {
       "firstName": "Kavya",

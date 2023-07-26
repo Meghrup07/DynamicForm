@@ -122,6 +122,14 @@
           >
             Save
           </button>
+          <button
+            type="button"
+            (click)="updateUser()"
+            class="btn btn-primary ms-3"
+            *ngIf="updateBtn"
+          >
+            update
+          </button>
         </div>
       </form>
     </div>
@@ -164,6 +172,13 @@
                   class="btn btn-danger"
                 >
                   Delete
+                </button>
+                <button
+                  type="button"
+                  (click)="editUser(user, user.id)"
+                  class="btn btn-info ms-2"
+                >
+                  Edit
                 </button>
               </td>
             </tr>

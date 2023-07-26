@@ -16,6 +16,10 @@ export class FormControlsComponent implements OnInit {
 
   userData: UserData[] = []
 
+  userId: any;
+
+  updateBtn: Boolean = false;
+
   constructor(private formService: FormService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
@@ -65,6 +69,26 @@ export class FormControlsComponent implements OnInit {
     this.formService.deleteUser(id).subscribe((res) => {
       alert("User Deleted Successfully!")
       this.getUserDetails();
+    })
+  }
+
+  editUser(userData: UserData, id: String) {
+    this.userForm.controls['firstName'].setValue(userData.firstName);
+    this.userForm.controls['lastName'].setValue(userData.lastName);
+    this.userForm.controls['email'].setValue(userData.email);
+    this.userForm.controls['mobileNumber'].setValue(userData.mobileNumber);
+    this.userForm.controls['dob'].setValue(userData.dob);
+    this.userForm.controls['userRole'].setValue(userData.userRole);
+    this.userForm.controls['gender'].setValue(userData.gender);
+    this.userId = id;
+    this.updateBtn = true;
+  }
+
+  updateUser() {
+    this.formService.updateUser(this.userForm.value, this.userId).subscribe((res) => {
+      alert("User Updated Successfully!")
+      this.getUserDetails();
+      this.userForm.reset();
     })
   }
 

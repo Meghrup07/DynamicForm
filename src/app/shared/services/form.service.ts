@@ -33,4 +33,9 @@ export class FormService {
     return this.http.delete(url)
   }
 
+  updateUser(data: any, id: string): Observable<any> {
+    const url: string = this.baseUrl + `/userInfo/${id}`;
+    return this.http.put(url, data);
+  }
+
 }
